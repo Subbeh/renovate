@@ -50,29 +50,29 @@ steps:
 kind: secret
 name: RENOVATE_TOKEN
 get:
-  path: doppler-drone
+  path: doppler-renovate
   name: RENOVATE_TOKEN
 ---
 kind: secret
 name: GITHUB_USER
 get:
-  path: doppler-drone
+  path: doppler-renovate
   name: GITHUB_USER
 ---
 kind: secret
 name: GITHUB_TOKEN
 get:
-  path: doppler-drone
+  path: doppler-renovate
   name: GITHUB_TOKEN
 ---
 kind: secret
 name: DOCKER_USER
 get:
-  path: doppler-drone
+  path: doppler-renovate
   name: DOCKER_USER
 ---
 kind: secret
 name: DOCKER_PASSWORD
 get:
-  path: doppler-drone
+  path: doppler-renovate
   name: DOCKER_PASSWORD
