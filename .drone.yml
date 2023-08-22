@@ -56,23 +56,23 @@ get:
 kind: secret
 name: GITHUB_USER
 get:
-  path: doppler-renovate
+  path: doppler-drone
   name: GITHUB_USER
 ---
 kind: secret
 name: GITHUB_TOKEN
 get:
-  path: doppler-renovate
+  path: doppler-drone
   name: GITHUB_TOKEN
 ---
 kind: secret
 name: DOCKER_USER
 get:
-  path: doppler-renovate
+  path: doppler-drone
   name: DOCKER_USER
 ---
 kind: secret
 name: DOCKER_PASSWORD
 get:
-  path: doppler-renovate
+  path: doppler-drone
   name: DOCKER_PASSWORD
