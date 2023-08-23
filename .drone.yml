@@ -50,7 +50,7 @@ steps:
 kind: secret
 name: RENOVATE_TOKEN
 get:
-  path: doppler-renovate
+  path: doppler-drone
   name: RENOVATE_TOKEN
 ---
 kind: secret
