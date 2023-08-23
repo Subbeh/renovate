@@ -1,3 +1,18 @@
 {
-  "$schema": "https://docs.renovatebot.com/renovate-schema.json"
+  "$schema": "https://docs.renovatebot.com/renovate-schema.json",
+  "prHourlyLimit": 0,
+  "prConcurrentLimit": 0,
+  "pruneStaleBranches": true,
+  "rebaseWhen": "conflicted",
+  "semanticCommits": "enabled",
+  "configMigration": true,
+  "dependencyDashboard": true,
+  "dependencyDashboardAutoclose": true,
+  "dependencyDashboardTitle": "Renovate Dashboard",
+
+  "major": {
+    "dependencyDashboardApproval": true
+  },
+
+  "commitMessageExtra": "from {{currentValue}} to {{#if isPinDigest}}{{{newDigestShort}}}{{else}}{{#if isMajor}}{{prettyNewMajor}}{{else}}{{#if isSingleVersion}}{{prettyNewVersion}}{{else}}{{#if newValue}}{{{newValue}}}{{else}}{{{newDigestShort}}}{{/if}}{{/if}}{{/if}}{{/if}}"
 }

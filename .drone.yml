@@ -14,14 +14,14 @@ environment:
 
 steps:
   - name: renovate - validate config
-    image: renovate/renovate:35.159.7
+    image: renovate/renovate:36.57
     # https://github.com/renovatebot/renovate/discussions/15049
     commands:
       # - unset GIT_COMMITTER_NAME GIT_COMMITTER_EMAIL GIT_AUTHOR_NAME GIT_AUTHOR_EMAIL
       - renovate-config-validator
 
   - name: renovate
-    image: renovate/renovate:35.159.7
+    image: renovate/renovate:36.57
     commands:
       - renovate
     environment:

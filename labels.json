@@ -1,0 +1,47 @@
+{
+  "packageRules": [
+    {
+      "matchUpdateTypes": ["major"],
+      "labels": ["type/major"],
+      "semanticCommitType": "feat!"
+    },
+    {
+      "matchUpdateTypes": ["minor"],
+      "labels": ["type/minor"],
+      "semanticCommitType": "feat"
+    },
+    {
+      "matchUpdateTypes": ["patch"],
+      "labels": ["type/patch"],
+      "semanticCommitType": "fix"
+    },
+    {
+      "matchManagers": ["ansible"],
+      "addLabels": ["apps"],
+      "semanticCommitScope": "apps"
+    },
+    {
+      "matchManagers": ["kubernetes"],
+      "addLabels": ["k8s"],
+      "semanticCommitScope": "k8s"
+    },
+    {
+      "matchDatasources": ["galaxy", "galaxy-collection"],
+      "addLabels": ["ansible"],
+      "semanticCommitScope": "ansible"
+    },
+    {
+      "matchDatasources": ["terraform", "terraform-provider"],
+      "addLabels": ["terraform"],
+      "semanticCommitScope": "tf"
+    },
+    {
+      "matchDatasources": ["droneci", "github-actions"],
+      "addLabels": ["ci"],
+      "semanticCommitScope": "ci"
+    },
+    {
+      "pre-commit": { "enabled": true }
+    }
+  ]
+}

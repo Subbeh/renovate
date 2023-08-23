@@ -1,0 +1,14 @@
+{
+  "hostRules": [
+    {
+      "matchHost": "docker.io",
+      "concurrentRequestLimit": 2,
+      "maxRequestsPerSecond": 2
+    },
+    {
+      "matchHost": "index.docker.io",
+      "concurrentRequestLimit": 2,
+      "maxRequestsPerSecond": 2
+    }
+  ]
+}
