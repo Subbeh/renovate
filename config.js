@@ -11,7 +11,6 @@ module.exports = {
     "local>sysadm/renovate-config:hostrules",
     "local>sysadm/renovate-config:packagerules",
     "local>sysadm/renovate-config:labels",
-    "schedule:weekly",
     "replacements:all",
   ],
 };
