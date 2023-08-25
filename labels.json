@@ -19,19 +19,14 @@
       "semanticCommitType": "fix"
     },
     {
-      "matchManagers": ["ansible"],
-      "addLabels": ["apps"],
-      "semanticCommitScope": "apps"
+      "matchCategories": ["ansible"],
+      "addLabels": ["ansible"],
+      "semanticCommitScope": "ansible"
     },
     {
       "matchCategories": ["kubernetes"],
       "addLabels": ["k8s"],
       "semanticCommitScope": "k8s"
-    },
-    {
-      "matchCategories": ["ansible"],
-      "addLabels": ["ansible"],
-      "semanticCommitScope": "ansible"
     },
     {
       "matchCategories": ["terraform"],
@@ -42,6 +37,11 @@
       "matchCategories": ["ci"],
       "addLabels": ["ci"],
       "semanticCommitScope": "ci"
+    },
+    {
+      "matchFileNames": ["ansible/apps/.+\\.ya?ml$"],
+      "addLabels": ["apps"],
+      "semanticCommitScope": "apps"
     },
     {
       "pre-commit": { "enabled": true }
