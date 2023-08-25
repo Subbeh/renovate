@@ -7,10 +7,10 @@ module.exports = {
   onboarding: true,
   persistRepoData: true,
   extends: [
-    "local>sysadm/renovate-config:base",
-    "local>sysadm/renovate-config:hostrules",
-    "local>sysadm/renovate-config:packagerules",
-    "local>sysadm/renovate-config:labels",
+    "local>infra/renovate-config:base",
+    "local>infra/renovate-config:hostrules",
+    "local>infra/renovate-config:packagerules",
+    "local>infra/renovate-config:labels",
     "replacements:all",
   ],
 };
