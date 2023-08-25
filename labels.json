@@ -1,6 +1,9 @@
 {
   "packageRules": [
     {
+      "semanticCommitType": "chore"
+    },
+    {
       "matchUpdateTypes": ["major"],
       "labels": ["type/major"],
       "semanticCommitType": "feat!"
@@ -21,22 +24,22 @@
       "semanticCommitScope": "apps"
     },
     {
-      "matchManagers": ["kubernetes"],
+      "matchCategories": ["kubernetes"],
       "addLabels": ["k8s"],
       "semanticCommitScope": "k8s"
     },
     {
-      "matchDatasources": ["galaxy", "galaxy-collection"],
+      "matchCategories": ["ansible"],
       "addLabels": ["ansible"],
       "semanticCommitScope": "ansible"
     },
     {
-      "matchDatasources": ["terraform", "terraform-provider"],
+      "matchCategories": ["terraform"],
       "addLabels": ["terraform"],
       "semanticCommitScope": "tf"
     },
     {
-      "matchDatasources": ["droneci", "github-actions"],
+      "matchCategories": ["ci"],
       "addLabels": ["ci"],
       "semanticCommitScope": "ci"
     },
