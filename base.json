@@ -2,13 +2,14 @@
   "$schema": "https://docs.renovatebot.com/renovate-schema.json",
   "prHourlyLimit": 0,
   "prConcurrentLimit": 0,
-  "pruneStaleBranches": true,
   "rebaseWhen": "conflicted",
   "semanticCommits": "enabled",
   "configMigration": true,
   "dependencyDashboard": true,
   "dependencyDashboardAutoclose": true,
   "dependencyDashboardTitle": "Renovate Dashboard",
+  "pruneBranchAfterAutomerge": true,
+  "pruneStaleBranches": true,
 
   "major": {
     "dependencyDashboardApproval": true

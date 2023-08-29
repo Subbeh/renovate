@@ -34,15 +34,15 @@ steps:
       GITHUB_COM_USER:
         from_secret: GITHUB_USER
       GITHUB_COM_TOKEN:
-        from_secret: GITHUB_TOKEN
+        from_secret: RENOVATE_GITHUB_TOKEN
       DOCKER_LSCR_IO_USERNAME:
         from_secret: GITHUB_USER
       DOCKER_LSCR_IO_PASSWORD:
-        from_secret: GITHUB_TOKEN
+        from_secret: RENOVATE_GITHUB_TOKEN
       DOCKER_GHRC_IO_USERNAME:
         from_secret: GITHUB_USER
       DOCKER_GHCR_IO_PASSWORD:
-        from_secret: GITHUB_TOKEN
+        from_secret: RENOVATE_GITHUB_TOKEN
     when:
       status: [success]
       event: [cron, custom]
@@ -59,8 +59,6 @@ steps:
         {{#success build.status}}✅{{else}}⚠️{{/success}}
         repo: `[{{repo.name}}/{{commit.branch}}]` `[{{uppercase build.event}}]` [[#{{build.number}}]({{build.link}})][[{{truncate commit.sha 5}}]({{commit.link}})]
                commit: `{{commit.message}}`
-    when:
-      status: [success, failure, changed]
 ---
 kind: secret
 name: RENOVATE_TOKEN
