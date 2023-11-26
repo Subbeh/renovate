@@ -16,12 +16,12 @@ environment:
 
 steps:
   - name: renovate - validate config
-    image: renovate/renovate:36.64
+    image: renovate/renovate:36.81
     commands:
       - renovate-config-validator
 
   - name: renovate
-    image: renovate/renovate:36.64
+    image: renovate/renovate:36.81
     commands:
       - renovate
     environment:
@@ -34,15 +34,15 @@ steps:
       GITHUB_COM_USER:
         from_secret: GITHUB_USER
       GITHUB_COM_TOKEN:
-        from_secret: RENOVATE_GITHUB_TOKEN
+        from_secret: GITHUB_TOKEN
       DOCKER_LSCR_IO_USERNAME:
         from_secret: GITHUB_USER
       DOCKER_LSCR_IO_PASSWORD:
-        from_secret: RENOVATE_GITHUB_TOKEN
+        from_secret: GITHUB_TOKEN
       DOCKER_GHRC_IO_USERNAME:
         from_secret: GITHUB_USER
       DOCKER_GHCR_IO_PASSWORD:
-        from_secret: RENOVATE_GITHUB_TOKEN
+        from_secret: GITHUB_TOKEN
     when:
       status: [success]
       event: [cron, custom]
