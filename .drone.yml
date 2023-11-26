@@ -52,9 +52,9 @@ steps:
     settings:
       username: Drone
       webhook_id:
-        from_secret: DRONE_DISCORD_ID
+        from_secret: DISCORD_ID
       webhook_token:
-        from_secret: DRONE_DISCORD_TOKEN
+        from_secret: DISCORD_TOKEN
       message: >
         {{#success build.status}}✅{{else}}⚠️{{/success}}
         repo: `[{{repo.name}}/{{commit.branch}}]` `[{{uppercase build.event}}]` [[#{{build.number}}]({{build.link}})][[{{truncate commit.sha 5}}]({{commit.link}})]
@@ -63,41 +63,41 @@ steps:
 kind: secret
 name: RENOVATE_TOKEN
 get:
-  path: doppler-drone
+  path: drone-secret
   name: RENOVATE_TOKEN
 ---
 kind: secret
 name: GITHUB_USER
 get:
-  path: doppler-drone
+  path: drone-secret
   name: GITHUB_USER
 ---
 kind: secret
 name: GITHUB_TOKEN
 get:
-  path: doppler-drone
+  path: drone-secret
   name: GITHUB_TOKEN
 ---
 kind: secret
 name: DOCKER_USER
 get:
-  path: doppler-drone
+  path: drone-secret
   name: DOCKER_USER
 ---
 kind: secret
 name: DOCKER_PASSWORD
 get:
-  path: doppler-drone
+  path: drone-secret
   name: DOCKER_PASSWORD
 ---
 kind: secret
-name: DRONE_DISCORD_ID
+name: DISCORD_ID
 get:
-  path: doppler-drone
-  name: DRONE_DISCORD_ID
+  path: drone-secret
+  name: DISCORD_ID
 ---
 kind: secret
-name: DRONE_DISCORD_TOKEN
+name: DISCORD_TOKEN
 get:
-  path: doppler-drone
-  name: DRONE_DISCORD_TOKEN
+  path: drone-secret
+  name: DISCORD_TOKEN
