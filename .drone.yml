@@ -23,6 +23,7 @@ steps:
   - name: renovate
     image: renovate/renovate:36.109
     commands:
+      - sleep 100000
       - renovate
     environment:
       RENOVATE_TOKEN:
