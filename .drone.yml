@@ -16,12 +16,12 @@ environment:
 
 steps:
   - name: renovate - validate config
-    image: renovate/renovate:36.109
+    image: renovate/renovate:37.91
     commands:
       - renovate-config-validator
 
   - name: renovate
-    image: renovate/renovate:36.109
+    image: renovate/renovate:37.91
     commands:
       - renovate
     environment:
