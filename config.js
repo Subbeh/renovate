@@ -7,10 +7,10 @@ module.exports = {
   onboarding: true,
   persistRepoData: true,
   extends: [
-    "local>infra/renovate-config:base",
-    "local>infra/renovate-config:hostrules",
-    "local>infra/renovate-config:packagerules",
-    "local>infra/renovate-config:labels",
+    "local>infra/renovate:base",
+    "local>infra/renovate:hostrules",
+    "local>infra/renovate:packagerules",
+    "local>infra/renovate:labels",
     "replacements:all",
   ],
 };
